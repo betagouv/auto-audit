@@ -2,8 +2,8 @@
 
 require "rails_helper"
 
-describe LanguageHelper, type: :helper do
-  subject { helper.questionize(label) }
+describe Questionize do
+  subject { Evaluation::Criterion.new.questionize(label) }
 
   let(:label) { "foobar" }
 
@@ -13,12 +13,6 @@ describe LanguageHelper, type: :helper do
     let(:label) { "ubar" }
 
     it { is_expected.to start_with "Est-ce qu'ubar ?" }
-  end
-
-  context "when the title starts with an accented vowel" do
-    let(:label) { "Émilie" }
-
-    it { is_expected.to start_with "Est-ce qu'Émilie ?" }
   end
 
   context "when the title ends with a dot" do

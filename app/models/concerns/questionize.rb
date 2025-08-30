@@ -12,5 +12,24 @@ module Questionize
   end
 
   included do
+    def questionize(label)
+      first, *middle, last = label.chars
+
+      prefix = vowel?(first) ? "Est-ce qu'" : "Est-ce que "
+
+      [
+        prefix,
+        first.downcase,
+        middle,
+        last == "." ? "" : last,
+        " ?"
+      ].compact.join
+    end
+
+    private
+
+    def vowel?(char)
+      char.downcase.in?(%w[a e i o u])
+    end
   end
 end

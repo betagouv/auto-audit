@@ -28,7 +28,7 @@
             %fieldset.fr-fieldset
               %legend.fr-fieldset__legend.fr-fieldset__legend--regular
                 :markdown
-                  #{questionize(criterion.label)}
+                  #{criterion.questionized_label}
               = ff.fields_for :criteria, index: index do |fff|
                 - Evaluation::Criterion::ANSWERS.each do |key, label|
                   .fr-fieldset__element.fr-fieldset__element--inline

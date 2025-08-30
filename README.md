@@ -54,11 +54,11 @@ peut imaginer `n/a` et autres dans un futur proche.
 
 ### 4. Exposition de la données
 
-Les évaluations sont disponibles sur deux terminaisons d'API :
+Les evaluations sont disponibles sur deux terminaisons d'API :
 
 #### `/api/evaluation/?startup_id=<ghid>`
 
-Retourne l'évaluation complète de la startup.
+Retourne l'evaluation complet de la startup.
 
 `ghid` est l'identifiant GitHub de votre startup, c'est à dire [un
 identifiant parmi ces fichiers sans l'extension

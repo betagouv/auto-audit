@@ -66,7 +66,7 @@ class EvaluationsController < ApplicationController
   end
 
   def set_evaluation_breadcrumb
-    add_breadcrumb("Évaluation du produit #{@startup.name}", startup_evaluation_path(@startup.ghid))
+    add_breadcrumb("Evaluation du produit #{@startup.name}", startup_evaluation_path(@startup.ghid))
   end
 
   def set_startup_breadcrumb
